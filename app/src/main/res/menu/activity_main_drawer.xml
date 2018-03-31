@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:id="@+id/nav_top_view"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_red"
+            android:title="Home" />
+
+
+        <item
+            android:id="@+id/sender_list"
+            android:icon="@drawable/menu_active_senders"
+            android:title="Senders" />
+        <item
+            android:id="@+id/carrier_list"
+            android:icon="@drawable/menu_active_carriers"
+            android:title="Carriers" />
+
+        <item
+            android:id="@+id/nav_my_bay"
+            android:title="My Bay"
+            android:icon="@drawable/menu_my_bay"/>
+
+
+
+    </group>
+
+    <item
+        android:id="@+id/nav_refer_and_earn"
+        android:icon="@drawable/menu_refer"
+        android:title="Refer and Earn" />
+
+    <item
+        android:id="@+id/nav_rate_app"
+        android:icon="@drawable/menu_rate_app"
+        android:title="Rate App" />
+
+    <group>
+
+
+
+    </group>
+
+    <group
+        android:id="@+id/legal"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_legal"
+            android:icon="@drawable/legal"
+            android:title="Legal" />
+
+        </group>
+
+    <group
+        android:id="@+id/nav_bottom_view"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/menu_contact"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/menu_settings"
+            android:title="Settings" />
+
+
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/menu_logout"
+            android:title="Logout" />
+    </group>
+</menu>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yourapp.developer.karrierbay">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBw3tDakHnjfI2RjQnN_AQShOS63IDW4rE" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_kb_notify" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <activity
+            android:name="com.ucarry.developer.android.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent.splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ucarry.developer.android.activity.SignUpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.SenderListActivityListActivity"
+            android:label="@string/title_senderlistactivity_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.SenderListActivityDetailActivity"
+            android:label="@string/title_senderlistactivity_detail"
+            android:parentActivityName="com.ucarry.developer.android.activity.SenderListActivityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ucarry.developer.android.activity.SenderListActivityListActivity" />
+        </activity>
+        <activity
+            android:name="com.ucarry.developer.android.activity.CarrierListActivity"
+            android:label="@string/title_carrier_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.CarrierDetailActivity"
+            android:label="@string/title_carrier_detail"
+            android:parentActivityName="com.ucarry.developer.android.activity.CarrierListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ucarry.developer.android.activity.CarrierListActivity" />
+        </activity>
+
+        <service android:name="com.ucarry.developer.android.Utilities.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.ucarry.developer.android.Utilities.FBMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.ucarry.developer.android.activity.BEACARRIER"
+            android:label="@string/title_activity_beacarrier"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.CarrierSummaryView"
+            android:label="@string/title_activity_carrier_summary_view"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.Settings"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.LegalListActivity"
+            android:label="@string/title_legal_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.LegalDetailActivity"
+            android:label="@string/title_legal_detail"
+            android:parentActivityName="com.ucarry.developer.android.activity.LegalListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ucarry.developer.android.activity.LegalListActivity" />
+        </activity>
+        <activity
+            android:name="com.ucarry.developer.android.activity.SenderOrderFirstPage"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.SenderOrderSecondPage"
+            android:label="@string/title_activity_sender_order_second_page"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.SenderOrderSummary"
+            android:label="@string/title_activity_sender_order_summary"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ucarry.developer.android.activity.ProfileVIewActivity" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.MyBayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.WallListActivity"
+            android:label="@string/title_wall_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ucarry.developer.android.activity.WallDetailActivity"
+            android:label="@string/title_wall_detail"
+            android:parentActivityName="com.ucarry.developer.android.activity.WallListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ucarry.developer.android.activity.WallListActivity" />
+        </activity>
+        <activity
+            android:name="com.ucarry.developer.android.activity.ContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="com.ucarry.developer.android.activity.NotificationSenderFlow"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="com.ucarry.developer.android.activity.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>
